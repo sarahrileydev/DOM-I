@@ -50,10 +50,23 @@ aList[3].textContent = "Features";
 aList[4].textContent = "About";
 aList[5].textContent = "Contact";
 
+
 const aTag = document.querySelectorAll('a');
 aTag.forEach( function( currentValue ){
   currentValue.style.color = 'green';
 });
+
+const blog = document.createElement('a');
+blog.textContent = "Blog";
+blog.style.color = "green";
+const newNav = document.querySelector("nav");
+newNav.prepend(blog);
+
+const detonate = document.createElement('a');
+detonate.textContent = "Detonate";
+detonate.style.color = "green";
+const det = document.querySelector("nav");
+det.appendChild(detonate);
 
 
 document.querySelector("h1").textContent = "DOM Is Awesome";
@@ -80,9 +93,9 @@ paragraph[3].textContent = siteContent["main-content"]["product-content"];
 title[4].textContent = siteContent["main-content"]["vision-h4"];
 paragraph[4].textContent = siteContent["main-content"]["vision-content"];
 
-title[5].innerHTML = siteContent["contact"]["contact-h4"];
-paragraph[5].innerHTML = siteContent["contact"]["address"];
-paragraph[6].innerHTML = siteContent["contact"]["phone"];
-paragraph[7].innerHTML = siteContent["contact"]["email"];
+title[5].textContent = siteContent["contact"]["contact-h4"];
+paragraph[5].textContent = siteContent["contact"]["address"];
+paragraph[6].textContent = siteContent["contact"]["phone"];
+paragraph[7].textContent = siteContent["contact"]["email"];
 
-paragraph[8].innerHTML = siteContent["footer"]["copyright"];
+paragraph[8].textContent = siteContent["footer"]["copyright"];
