@@ -38,8 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img")
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const aList = document.getElementsByTagName("a");
 aList[0].textContent = "Services";
@@ -52,9 +52,19 @@ aList[5].textContent = "Contact";
 document.querySelector("h1").textContent = "DOM Is Awesome";
 document.querySelector("button").textContent = "Get Started";
 
+let headerPic = document.getElementById("cta-img");
+headerPic.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let heading = document.getElementById("cta-img")
-heading.setAttribute('src', siteContent["cta"]["img-src"])
+const title = document.getElementsByTagName("h4");
+const paragraph = document.getElementsByTagName("p");
 
-let middlePic = document.getElementById("middle-img")
-middlePic.setAttribute('src', siteContent["main-content"]["img-src"])
+title[0].textContent = siteContent["main-content"]["features-h4"];
+paragraph[0].textContent = siteContent["main-content"]["features-content"];
+title[1].textContent = siteContent["main-content"]["about-h4"];
+paragraph[1].textContent = siteContent["main-content"]["about-content"];
+title[2].textContent = siteContent["main-content"]["services-h4"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+
+
+let middlePic = document.getElementById("middle-img");
+middlePic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
