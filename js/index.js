@@ -42,12 +42,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const aList = document.getElementsByTagName("a");
+
 aList[0].textContent = "Services";
 aList[1].textContent = "Product";
 aList[2].textContent = "Vision";
 aList[3].textContent = "Features";
 aList[4].textContent = "About";
 aList[5].textContent = "Contact";
+
+const aTag = document.querySelectorAll('a');
+aTag.forEach( function( currentValue ){
+  currentValue.style.color = 'green';
+});
+
 
 document.querySelector("h1").textContent = "DOM Is Awesome";
 document.querySelector("button").textContent = "Get Started";
@@ -62,9 +69,20 @@ title[0].textContent = siteContent["main-content"]["features-h4"];
 paragraph[0].textContent = siteContent["main-content"]["features-content"];
 title[1].textContent = siteContent["main-content"]["about-h4"];
 paragraph[1].textContent = siteContent["main-content"]["about-content"];
-title[2].textContent = siteContent["main-content"]["services-h4"];
-paragraph[2].textContent = siteContent["main-content"]["services-content"];
-
 
 let middlePic = document.getElementById("middle-img");
 middlePic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+title[2].textContent = siteContent["main-content"]["services-h4"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+title[3].textContent = siteContent["main-content"]["product-h4"];
+paragraph[3].textContent = siteContent["main-content"]["product-content"];
+title[4].textContent = siteContent["main-content"]["vision-h4"];
+paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+
+title[5].innerHTML = siteContent["contact"]["contact-h4"];
+paragraph[5].innerHTML = siteContent["contact"]["address"];
+paragraph[6].innerHTML = siteContent["contact"]["phone"];
+paragraph[7].innerHTML = siteContent["contact"]["email"];
+
+paragraph[8].innerHTML = siteContent["footer"]["copyright"];
